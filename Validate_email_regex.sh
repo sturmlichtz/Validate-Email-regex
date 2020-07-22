@@ -1,2 +1,9 @@
 #!/bin/bash
-echo "Validate Email address with a regex"
+read -p "Enter email to validate :- " email
+email_Pattern="^[a-z]"
+if [[ $email =~ $email_Pattern ]]
+then
+   echo "Valid email address"
+else
+   echo "Invalid email address"
+fi
